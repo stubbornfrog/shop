@@ -1,0 +1,20 @@
+#端口号
+server:
+  port: 8888
+#Eureka实例名，集群中根据这里相互识别
+eureka:
+  instance:
+    hostname: eureka1
+#客户端
+  client:
+    fetch-registry: false
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8889/eureka/
+  server:
+#是否开启安全保护，默认是开启的，如果默认开启，注册中心的服务列表就算有些服务断开了，也会继续保存
+    enable-self-preservation: true
+    wait-time-in-ms-when-sync-empty: 10000
+spring:
+  application:
+    name: eureka-service
