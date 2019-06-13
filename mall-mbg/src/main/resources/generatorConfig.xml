@@ -26,12 +26,12 @@
                         password="${jdbc.password}">
         </jdbcConnection>
 
-        <javaModelGenerator targetPackage="com.macro.mall.model" targetProject="mall-mbg\src\main\java"/>
+        <javaModelGenerator targetPackage="test.model" targetProject=".\src\main\java"/>
 
-        <sqlMapGenerator targetPackage="com.macro.mall.mapper" targetProject="mall-mbg\src\main\resources"/>
+        <sqlMapGenerator targetPackage="test.mapper" targetProject=".\src\main\resources"/>
 
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.macro.mall.mapper"
-                             targetProject="mall-mbg\src\main\java"/>
+        <javaClientGenerator type="XMLMAPPER" targetPackage="test.mapper"
+                             targetProject=".\src\main\java"/>
         <!--生成全部表tableName设为%-->
         <table tableName="%">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
